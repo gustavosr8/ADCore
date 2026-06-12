@@ -549,7 +549,7 @@ record(dfanout, "$(P)$(R)SetYHOPR")
 }
 
 ###################################################################
-#  These records whether dimensions of 1 are collapsed (removed)  #                               # 
+#  These records whether dimensions of 1 are collapsed (removed)  #
 ###################################################################
 
 record(bo, "$(P)$(R)CollapseDims")
@@ -573,5 +573,3 @@ record(bi, "$(P)$(R)CollapseDims_RBV")
    field(OSV,  "MINOR")
    field(SCAN, "I/O Intr")
 }
-
-
