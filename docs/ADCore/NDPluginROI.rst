@@ -130,6 +130,13 @@ are just a single name, for example ``NDPluginROIName``.
     - DIM0_MIN
     - $(P)$(R)MinX, $(P)$(R)MinX_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Start point for the X dimension. Same as Dim0Min, but for handle region definition using Start and End points. 
+    - N/A 
+    - $(P)$(R)StartX, $(P)$(R)StartX_RBV 
+    - longout, longin 
   * - NDPluginROI, Dim1Min
     - asynInt32
     - r/w
@@ -137,6 +144,13 @@ are just a single name, for example ``NDPluginROIName``.
     - DIM1_MIN
     - $(P)$(R)MinY, $(P)$(R)MinY_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Start point for the Y dimension. Same as Dim1Min, but for handle region definition using Start and End points. 
+    - N/A 
+    - $(P)$(R)StartY, $(P)$(R)StartY_RBV 
+    - longout, longin 
   * - NDPluginROI, Dim2Min
     - asynInt32
     - r/w
@@ -144,6 +158,13 @@ are just a single name, for example ``NDPluginROIName``.
     - DIM2_MIN
     - $(P)$(R)MinZ, $(P)$(R)MinZ_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Start point for the Z dimension. Same as Dim2Min, but for handle region definition using Start and End points. 
+    - N/A 
+    - $(P)$(R)StartZ, $(P)$(R)StartZ_RBV 
+    - longout, longin 
   * - NDPluginROI, Dim0Size
     - asynInt32
     - r/w
@@ -151,6 +172,13 @@ are just a single name, for example ``NDPluginROIName``.
     - DIM0_SIZE
     - $(P)$(R)SizeX, $(P)$(R)SizeX_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Last pixel to read in the X direction. 
+    - N/A 
+    - $(P)$(R)EndX, $(P)$(R)EndX_RBV 
+    - longout, longin 
   * - NDPluginROI, Dim1Size
     - asynInt32
     - r/w
@@ -158,6 +186,13 @@ are just a single name, for example ``NDPluginROIName``.
     - DIM1_SIZE
     - $(P)$(R)SizeY, $(P)$(R)SizeY_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Last pixel to read in the Y direction. 
+    - N/A 
+    - $(P)$(R)EndY, $(P)$(R)EndY_RBV 
+    - longout, longin 
   * - NDPluginROI, Dim2Size
     - asynInt32
     - r/w
@@ -165,6 +200,13 @@ are just a single name, for example ``NDPluginROIName``.
     - DIM2_SIZE
     - $(P)$(R)SizeZ, $(P)$(R)SizeZ_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Last pixel to read in the Z direction. 
+    - N/A 
+    - $(P)$(R)EndZ, $(P)$(R)EndZ_RBV 
+    - longout, longin 
   * - NDPluginROI, Dim0AutoSize
     - asynInt32
     - r/w

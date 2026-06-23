@@ -191,6 +191,13 @@ tables.
     - ROISTAT_DIM0_MIN
     - $(P)$(R)MinX, $(P)$(R)MinX_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Start point for the X dimension. Same as NDPluginROIStatDim0Min, but for handle region definition using Start and End points. 
+    - N/A 
+    - $(P)$(R)StartX, $(P)$(R)StartX_RBV 
+    - longout, longin 
   * - NDPluginROIStatDim0Size
     - asynInt32
     - r/w
@@ -198,6 +205,13 @@ tables.
     - ROISTAT_DIM0_SIZE
     - $(P)$(R)SizeX, $(P)$(R)SizeX_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Last pixel to read in the X direction. 
+    - N/A 
+    - $(P)$(R)EndX, $(P)$(R)EndX_RBV 
+    - longout, longin 
   * - NDPluginROIStatDim0MaxSize
     - asynInt32
     - r/o
@@ -212,6 +226,13 @@ tables.
     - ROISTAT_DIM1_MIN
     - $(P)$(R)MinY, $(P)$(R)MinY_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Start point for the Y dimension. Same as NDPluginROIStatDim1Min, but for handle region definition using Start and End points. 
+    - N/A 
+    - $(P)$(R)StartY, $(P)$(R)StartY_RBV 
+    - longout, longin 
   * - NDPluginROIStatDim1Size
     - asynInt32
     - r/w
@@ -219,6 +240,13 @@ tables.
     - ROISTAT_DIM1_SIZE
     - $(P)$(R)SizeY, $(P)$(R)SizeY_RBV
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Last pixel to read in the Y direction. 
+    - N/A 
+    - $(P)$(R)EndY, $(P)$(R)EndY_RBV 
+    - longout, longin 
   * - NDPluginROIStatDim1MaxSize
     - asynInt32
     - r/o

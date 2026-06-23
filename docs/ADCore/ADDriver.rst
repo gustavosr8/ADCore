@@ -90,6 +90,13 @@ possible.
     - MIN_X 
     - $(P)$(R)MinX, $(P)$(R)MinX_RBV 
     - longout, longin 
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Start point for the X dimension. Same as ADMinX, but for handle region definition using Start and End points. 
+    - N/A 
+    - $(P)$(R)StartX, $(P)$(R)StartX_RBV 
+    - longout, longin 
   * - ADMinY 
     - asynInt32 
     - r/w 
@@ -97,6 +104,13 @@ possible.
     - MIN_Y 
     - $(P)$(R)MinY, $(P)$(R)MinY_RBV 
     - longout, longin
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Start point for the Y dimension. Same as ADMinY, but for handle region definition using Start and End points. 
+    - N/A 
+    - $(P)$(R)StartY, $(P)$(R)StartY_RBV 
+    - longout, longin 
   * - ADSizeX 
     - asynInt32 
     - r/w 
@@ -104,12 +118,26 @@ possible.
     - SIZE_X 
     - $(P)$(R)SizeX, $(P)$(R)SizeX_RBV 
     - longout, longin 
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Last pixel to read in the X direction. 
+    - N/A 
+    - $(P)$(R)EndX, $(P)$(R)EndX_RBV 
+    - longout, longin 
   * - ADSizeY 
     - asynInt32 
     - r/w 
     - Size of the region to read in the Y direction 
     - SIZE_Y 
     - $(P)$(R)SizeY, $(P)$(R)SizeY_RBV 
+    - longout, longin 
+  * - N/A 
+    - N/A 
+    - r/w 
+    - Last pixel to read in the Y direction. 
+    - N/A 
+    - $(P)$(R)EndY, $(P)$(R)EndY_RBV 
     - longout, longin 
   * - ADReverseX 
     - asynInt32 
