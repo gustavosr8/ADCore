@@ -89,69 +89,7 @@ record(longin, "$(P)$(R)BgdWidth_RBV")
 #  including region start and size                                # 
 ###################################################################
 
-record(longout, "$(P)$(R)MinX")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM0_MIN")
-   field(VAL,  "0")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)MinX_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM0_MIN")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)MinY")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM1_MIN")
-   field(VAL,  "0")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)MinY_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM1_MIN")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)SizeX")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM0_SIZE")
-   field(VAL,  "1")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)SizeX_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM0_SIZE")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)SizeY")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM1_SIZE")
-   field(VAL,  "1")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)SizeY_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))ROISTAT_DIM1_SIZE")
-   field(SCAN, "I/O Intr")
-}
+include "NDRoiStatNDims.db"
 
 record(longin, "$(P)$(R)MaxSizeX_RBV")
 {

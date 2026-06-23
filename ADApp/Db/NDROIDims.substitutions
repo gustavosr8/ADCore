@@ -1,0 +1,7 @@
+file "NDDims.template"
+{
+    pattern { DIM, MIN_PARAM, SIZE_PARAM, ADDR,         TIMEOUT }
+            { X,   DIM0_MIN,  DIM0_SIZE,  "\$(ADDR=0)", "\$(TIMEOUT=1)" }
+            { Y,   DIM1_MIN,  DIM1_SIZE,  "\$(ADDR=0)", "\$(TIMEOUT=1)" }
+            { Z,   DIM2_MIN,  DIM2_SIZE,  "\$(ADDR=0)", "\$(TIMEOUT=1)" }
+}
