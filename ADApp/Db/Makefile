@@ -14,7 +14,7 @@ include $(TOP)/configure/CONFIG
 
 DB += $(patsubst ../%, %, $(wildcard ../*.template))
 DB += $(patsubst ../%, %, $(wildcard ../*.req))
-DB += $(patsubst ../%, %, $(wildcard ../*.substitutions))
+DB += $(patsubst ../%.substitutions, %.db, $(wildcard ../*.substitutions))
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

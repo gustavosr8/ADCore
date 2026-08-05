@@ -29,6 +29,8 @@ record(stringin, "$(P)$(R)Name_RBV")
 #  including binning, region start and size                       # 
 ###################################################################
 
+include "NDROIDims.db"
+
 record(longout, "$(P)$(R)BinX")
 {
    field(PINI, "YES")
@@ -74,105 +76,6 @@ record(longin, "$(P)$(R)BinZ_RBV")
 {
    field(DTYP, "asynInt32")
    field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM2_BIN")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)MinX")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM0_MIN")
-   field(LOPR, "0")
-   field(VAL,  "0")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)MinX_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM0_MIN")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)MinY")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM1_MIN")
-   field(LOPR, "0")
-   field(VAL,  "0")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)MinY_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM1_MIN")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)MinZ")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM2_MIN")
-   field(LOPR, "1")
-   field(VAL,  "0")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)MinZ_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM2_MIN")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)SizeX")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM0_SIZE")
-   field(VAL,  "1000000")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)SizeX_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM0_SIZE")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)SizeY")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM1_SIZE")
-   field(VAL,  "1000000")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)SizeY_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM1_SIZE")
-   field(SCAN, "I/O Intr")
-}
-
-record(longout, "$(P)$(R)SizeZ")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM2_SIZE")
-   field(VAL,  "1000000")
-   info(autosaveFields, "VAL")
-}
-
-record(longin, "$(P)$(R)SizeZ_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))DIM2_SIZE")
    field(SCAN, "I/O Intr")
 }
 
@@ -549,7 +452,7 @@ record(dfanout, "$(P)$(R)SetYHOPR")
 }
 
 ###################################################################
-#  These records whether dimensions of 1 are collapsed (removed)  #                               # 
+#  These records whether dimensions of 1 are collapsed (removed)  #
 ###################################################################
 
 record(bo, "$(P)$(R)CollapseDims")
@@ -573,5 +476,3 @@ record(bi, "$(P)$(R)CollapseDims_RBV")
    field(OSV,  "MINOR")
    field(SCAN, "I/O Intr")
 }
-
-

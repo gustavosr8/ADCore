@@ -1,0 +1,79 @@
+###################################################################
+# Records to handle region definition for a given min and size    #
+###################################################################
+
+record(longout, "$(P)$(R)Min$(DIM)")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))$(MIN_PARAM)")
+   field(VAL,  "0")
+   info(autosaveFields, "VAL")
+}
+
+record(longin, "$(P)$(R)Min$(DIM)_RBV")
+{
+   field(DTYP, "asynInt32")
+   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))$(MIN_PARAM)")
+   field(SCAN, "I/O Intr")
+}
+
+record(longout, "$(P)$(R)Size$(DIM)")
+{
+   field(PINI, "YES")
+   field(DTYP, "asynInt32")
+   field(OUT,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))$(SIZE_PARAM)")
+   field(VAL,  "1")
+   info(autosaveFields, "VAL")
+}
+
+record(longin, "$(P)$(R)Size$(DIM)_RBV")
+{
+   field(DTYP, "asynInt32")
+   field(INP,  "@asyn($(PORT),$(ADDR=0),$(TIMEOUT=1))$(SIZE_PARAM)")
+   field(SCAN, "I/O Intr")
+}
+
+###################################################################
+# Records to handle region definition for a given start and end   #
+###################################################################
+
+record(longout, "$(P)$(R)Start$(DIM)")
+{
+   field(DESC, "Start point for $(DIM) dimension")
+   field(OUT, "$(P)$(R)Min$(DIM) PP")
+   field(FLNK, "$(P)$(R)ConvToSize$(DIM)")
+}
+
+record(longin, "$(P)$(R)Start$(DIM)_RBV")
+{
+   field(DESC, "Start point for $(DIM) dimension RBV")
+   field(INP, "$(P)$(R)Min$(DIM) CP")
+}
+
+record(longout, "$(P)$(R)End$(DIM)")
+{
+   field(DESC, "Exclusive end point for $(DIM) dimension")
+   field(FLNK, "$(P)$(R)ConvToSize$(DIM)")
+}
+
+record(longin, "$(P)$(R)End$(DIM)_RBV")
+{
+   field(DESC, "Exclusive end point for $(DIM) dimension RBV")
+}
+
+record(calcout, "$(P)$(R)ConvToSize$(DIM)")
+{
+   field(INPA, "$(P)$(R)Start$(DIM)")
+   field(INPB, "$(P)$(R)End$(DIM)")
+   field(CALC, "B-A")
+   field(OUT, "$(P)$(R)Size$(DIM) PP")
+}
+
+record(calcout, "$(P)$(R)ConvToEnd$(DIM)_RBV")
+{
+   field(INPA, "$(P)$(R)Min$(DIM)_RBV CP")
+   field(INPB, "$(P)$(R)Size$(DIM)_RBV CP")
+   field(CALC, "A+B")
+   field(OUT, "$(P)$(R)End$(DIM)_RBV PP")
+}
